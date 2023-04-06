@@ -40,6 +40,7 @@ LOGGER = getLogger(__name__)
 
 load_dotenv("config.env", override=True)
 
+Popen("gunicorn app:app", shell=True)
 
 def getConfig(name: str):
     return environ[name]
